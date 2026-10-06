@@ -1,0 +1,15 @@
+base: configs/paper.yaml
+grid:
+  coherence_central_seconds:
+  - 30
+  - 50
+  - 70
+independent_topologies: true
+name: reduced_coherence
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 3

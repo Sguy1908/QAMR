@@ -1,0 +1,15 @@
+base: configs/paper.yaml
+grid:
+  arrival_rate:
+  - 0.1
+  - 0.5
+  - 1.0
+name: reduced
+overrides:
+  simulation_duration_seconds: 2000
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 3

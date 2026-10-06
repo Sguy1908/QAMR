@@ -1,0 +1,16 @@
+base: configs/paper.yaml
+grid:
+  memory_capacity:
+  - 8
+  - 12
+  - 16
+  - 24
+independent_topologies: true
+name: reduced_memory
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 3

@@ -1,0 +1,16 @@
+# Table II values; all other resolved defaults are documented implementation assumptions.
+nodes: 60
+target_mean_degree: 4
+memory_capacity: 8
+coherence_central_seconds: 50
+coherence_spread_seconds: 10
+swap_time_seconds: 0.05
+purification_time_seconds: 0.02
+swap_success_probability: 0.95
+initial_fidelity: 0.98
+purification_efficiency: 0.6
+fidelity_threshold: 0.85
+arrival_rate: 0.5
+simulation_duration_seconds: 2000
+max_paths: 2
+profile: paper_reconstruction

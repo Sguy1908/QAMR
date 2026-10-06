@@ -1,0 +1,17 @@
+base: configs/paper.yaml
+grid:
+  max_paths:
+  - 1
+  - 2
+independent_topologies: true
+name: robustness
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+- no_queue
+- no_purification
+- congestion_penalty
+repetitions: 20

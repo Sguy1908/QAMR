@@ -1,0 +1,21 @@
+base: configs/paper.yaml
+grid:
+  failures:
+  - []
+  - - duration: 100
+      node: 0
+      time: 500
+  - - duration: 100
+      edge:
+      - 0
+      - 1
+      time: 500
+independent_topologies: true
+name: reduced_failures
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 3

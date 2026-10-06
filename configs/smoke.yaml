@@ -1,0 +1,7 @@
+profile: smoke_reconstruction
+nodes: 12
+radius: 0.5
+simulation_duration_seconds: 100
+arrival_rate: 1
+sessions: [[0, 11], [1, 10]]
+trace: true

@@ -1,0 +1,14 @@
+base: configs/smoke.yaml
+grid:
+  arrival_rate:
+  - 0.1
+  - 0.5
+  - 1.0
+name: smoke
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 3

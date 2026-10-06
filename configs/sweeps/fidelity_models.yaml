@@ -1,0 +1,17 @@
+base: configs/paper.yaml
+grid:
+  event_fidelity_model:
+  - paper_exponential
+  - paper_half_floor
+  routing_fidelity_model:
+  - paper_exponential
+  - paper_half_floor
+independent_topologies: true
+name: fidelity_models
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 20

@@ -1,0 +1,3 @@
+event_fidelity_model: paper_half_floor
+profile: half_floor
+routing_fidelity_model: paper_half_floor

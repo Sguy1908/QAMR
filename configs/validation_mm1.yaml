@@ -1,0 +1,6 @@
+lam: 0.6
+mu: 1.0
+capacity: null
+duration: 20000
+warmup: 2000
+repetitions: 20

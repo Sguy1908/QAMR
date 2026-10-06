@@ -1,0 +1,18 @@
+base: configs/paper.yaml
+grid:
+  load_estimator:
+  - steady_split
+  - rolling
+  - literal_full
+  path_service:
+  - bottleneck
+  - serial
+independent_topologies: true
+name: path_service
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 20

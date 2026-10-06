@@ -1,0 +1,15 @@
+base: configs/paper.yaml
+grid:
+  dispatch:
+  - split
+  - replicate
+  - round_robin
+independent_topologies: true
+name: dispatch
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 20

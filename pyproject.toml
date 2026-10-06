@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qamr-sim"
+version = "0.1.0"
+description = "Auditable paper reconstruction of queue-aware multipath entanglement routing"
+requires-python = ">=3.11"
+dependencies = ["simpy", "numpy", "networkx", "scipy", "pandas", "pyarrow", "matplotlib", "typer", "pydantic>=2", "PyYAML", "streamlit", "plotly"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+qamr-sim = "qamr_sim.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not statistical'"
+markers = ["statistical: independent long queue validation"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"dashboard/app.py" = ["E501"]
+"src/qamr_sim/experiments/runner.py" = ["E501"]
+"src/qamr_sim/experiments/manifest.py" = ["E501"]

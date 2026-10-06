@@ -1,0 +1,22 @@
+base: configs/paper.yaml
+grid:
+  arrival_rate:
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  - 0.6
+  - 0.7
+  - 0.8
+  - 0.9
+  - 1.0
+independent_topologies: true
+name: arrival_rate
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 20

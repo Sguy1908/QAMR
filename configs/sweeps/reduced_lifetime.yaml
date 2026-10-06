@@ -1,0 +1,15 @@
+base: configs/paper.yaml
+grid:
+  coherence_distribution:
+  - bounded_uniform
+  - positive_truncated_normal
+  - fixed
+independent_topologies: true
+name: reduced_lifetime
+overrides:
+  trace: false
+policies:
+- qamr
+- single_path
+- queue_aware_single
+repetitions: 3
